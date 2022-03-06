@@ -39,7 +39,7 @@ public class DataGenerator {
             Faker faker = new Faker(new Locale("ru"));
             return new RegistrationByCardInfo(
                     setCityRandomArray(),
-                    faker.name().firstName().replace("ё", "е") + " " + faker.name().lastName().replace("ё", "е"),
+                    faker.name().lastName().replace("ё", "е") + " " + faker.name().firstName().replace("ё", "е"),
                     faker.phoneNumber().phoneNumber());
         }
         public static String generateDate(int days) {
